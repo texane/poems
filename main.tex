@@ -1,0 +1,76 @@
+\documentclass[titlepage]{octavo}
+\usepackage[lmargin=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{lettrine}
+\usepackage{tgchorus}
+\usepackage[T1]{fontenc}
+\usepackage{niceframe}
+\usepackage{parselines}
+\usepackage{xcolor}
+\definecolorseries{verso}{rgb}{last}{blue!40!black}{magenta!40!black}
+\resetcolorseries[30]{verso}
+
+\newenvironment{verso}{\pagebreak[3]\begin{parse lines}[\parindent=1em\noindent]{\color{verso!!+}\hspace{\row\parindent}##1\newline\color{black}}}%
+{\end{parse lines}}
+
+
+\title{My \LaTeX{} \emph{poetry}}
+\author{by Fabien Le Mentec}
+\date{}
+
+\pagestyle{empty}
+\setcounter{secnumdepth}{-1}
+\setcounter{tocdepth}{1}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\vfill 
+
+\Huge \fontsize{75}{60}\selectfont
+\artdecoframe{\emph{Poems}}
+\vfill 
+\large\emph{By Fabien Le Mentec} 
+\vfill
+\end{center}
+\end{titlepage}
+
+\curlyframe{\vspace{-8ex}\tableofcontents\vspace{8ex}}
+
+\pagebreak 
+\section{\dotfill Made Of Ink}
+\large
+
+\resetcolorseries[16]{verso}
+\begin{verso}
+\makebox[.6em][c]{\lettrine{H}{}}ere, what's not white
+Is filled with black.
+No striking light
+No fading black.
+\end{verso}
+
+\begin{verso}
+There is no joy
+In what I think.
+'Cause I'm a boy
+All made of ink.
+\end{verso}
+
+\hfill{FLM, 17 December 2014}
+
+\pagebreak
+\section{\dotfill Interia}
+\large
+
+\resetcolorseries[24]{verso}
+\begin{verso}
+\makebox[1em][c]{\lettrine{T}{}}here is no shame in getting lost
+What is foolish, is staying frost.
+Waiting for things, 'till it's too late,
+So find your path, fulfill your fate.
+\end{verso}
+
+\hfill{FLM, 1 January 2015}
+
+\end{document}
